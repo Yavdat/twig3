@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Our site</title>
+    <title>{% block heading %}{{config.title}}{% endblock %}</title>
 </head>
 <body>
-<h1>{% block heading %}{% endblock %}</h1>
+<h1>{{block('heading')}}</h1>
 {% block content %}Здесь есть рыба!{% endblock %}
 <footer>{% block footer %} &copy; BashRu {% endblock %}</footer>
 </body>
